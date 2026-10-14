@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soona Paana Food Delivary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🍽️ Soona Paana Food Delivary</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Soona Paana Food Delivary</h1>
+    <p>Hot and fresh meals delivered to your doorstep.</p>
+    <p class="offer">🎉 Free delivery on orders above ₹500! Use code SAVE10 for 10% off.</p>
+  </section>
+
+  <main class="container">
+    <section id="menu" class="menu-section">
+      <h2>Our Menu</h2>
+      <div class="controls">
+        <input type="text" id="search" placeholder="Search food...">
+        <div class="filters">
+          <button class="filter-btn active" data-cat="all">All</button>
+          <button class="filter-btn" data-cat="pizza">Pizza</button>
+          <button class="filter-btn" data-cat="burgers">Burgers</button>
+          <button class="filter-btn" data-cat="indian">Indian</button>
+          <button class="filter-btn" data-cat="desserts">Desserts</button>
+          <button class="filter-btn" data-cat="drinks">Drinks</button>
+        </div>
+      </div>
+      <div id="menu-list" class="menu-grid"></div>
+    </section>
+
+    <aside class="cart">
+      <h2>Your Cart</h2>
+      <div id="cart-items">
+        <p class="empty">Your cart is empty</p>
+      </div>
+
+      <div class="summary">
+        <div class="row"><span>Subtotal</span><span id="subtotal">₹0.00</span></div>
+        <div class="row"><span>Delivery Fee</span><span id="delivery">₹0.00</span></div>
+        <div class="row"><span>Tax (5%)</span><span id="tax">₹0.00</span></div>
+        <div class="row"><span>Discount</span><span id="discount">-₹0.00</span></div>
+        <div class="row total"><span>Total</span><span id="total">₹0.00</span></div>
+      </div>
+
+      <div class="promo">
+        <input type="text" id="promo-code" placeholder="Promo code">
+        <button id="apply-promo">Apply</button>
+      </div>
+      <p id="promo-msg"></p>
+
+      <h3>Delivery Details</h3>
+      <input type="text" id="name" placeholder="Full name">
+      <input type="text" id="phone" placeholder="Phone number">
+      <textarea id="address" placeholder="Delivery address"></textarea>
+      <button id="place-order">Place Order</button>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2019 Soona Paana Food Delivary. All rights reserved.</p>
+  </footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h2>🎉 Order Placed!</h2>
+      <p>Thank you, <span id="cust-name"></span>!</p>
+      <p>Order ID: <strong id="order-id"></strong></p>
+      <p>Your food will arrive in 30 minutes.</p>
+      <p>Expected delivery by: <strong id="eta"></strong></p>
+      <button id="close-modal">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
